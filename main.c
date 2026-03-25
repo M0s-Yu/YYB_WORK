@@ -83,7 +83,7 @@ void Timer0_ISR(void) interrupt 1 // Timer0 的中断号 1
         }
     }
 }
-
+//中断函数这里是不是可以创建一个函数调用计次，if达到500或1000次数后执行对应task函数再Count归零,也可以实现类似非阻塞延时的效果？
 
 void task_load(unsigned int fn, unsigned char tid)//任务加载（保持原逻辑）
 {
@@ -92,7 +92,7 @@ void task_load(unsigned int fn, unsigned char tid)//任务加载（保持原逻�
     task_sp[tid] = (unsigned char)&task_stack[tid][1];
 }
 
-
+//========================================================亮灯修改成了51单片机对应的两个灯
 void task0(void)//任务0：0.5秒闪烁
 {
     P2_0 = 0;
