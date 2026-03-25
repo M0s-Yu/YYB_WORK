@@ -1,6 +1,6 @@
 #include <REGX52.H>
 #include <INTRINS.H>
-
+//玉永彬
 #define MAX_TASKS 2 //表示有两个任务
 #define MAX_TASK_DEP 32 //表示栈的深度
 
