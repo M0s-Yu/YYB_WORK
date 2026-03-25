@@ -83,7 +83,7 @@ void Timer0_ISR(void) interrupt 1 // Timer0 的中断号 1
         }
     }
 }
-//中断函数这里是不是可以创建一个函数调用计次，if达到500或1000次数后执行对应task函数再Count归零,也可以实现类似非阻塞延时的效果？
+//中断这里是不是可以加入两个计次函数Count1 2,if次数分别到达500和1000时，执行task并重置Count值，实现类似非阻塞延时亮灯效果
 
 void task_load(unsigned int fn, unsigned char tid)//任务加载（保持原逻辑）
 {
